@@ -1,13 +1,14 @@
 package com.example.guessthenumber;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 public class MainActivity extends AppCompatActivity {
-
+    boolean flag=false;
     int result;
     static int getRandomNumber(int max, int min)
     {
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     {
         int userGuessing;
         EditText variable
-                = (EditText)findViewById(
+                = findViewById(
                 R.id.editId);
         userGuessing
                 = Integer.parseInt(
@@ -39,9 +40,20 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             makeToast(
-                    "Congratulations,"
-                            +" You Got the Number");
-        }
+                    "Congratulations,"+" You Got the Number");
+            flag=true;
+    }
+
+        Button admin_see_questions = findViewById(R.id.button2);
+        if ( flag )
+        {
+            admin_see_questions.setVisibility(View.VISIBLE);
+            admin_see_questions.setOnClickListener(v -> {
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
+            });
+        } else admin_see_questions.setVisibility(View.INVISIBLE);
     }
 
     @Override
