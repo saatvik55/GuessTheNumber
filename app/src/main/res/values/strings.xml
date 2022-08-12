@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Guess The Number</string>
+    <string name="app_name" >Guess The Number</string>
+    <string name="guess_the_number">GUESS THE NUMBER</string>
+    <string name="guess">GUESS</string>
+    <string name="i_am_thinking_a_number_between_1_to_100_can_you_guess_what_it_is">I am thinking a number between 1 to 100. Can you guess what it is ?</string>
+    <string name="enter">ENTER</string>
+    <string name="play_again">Play Again</string>
 </resources>

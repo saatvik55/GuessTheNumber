@@ -9,7 +9,7 @@
     tools:ignore="MissingClass">
 
     <RelativeLayout
-        android:layout_width="409dp"
+        android:layout_width="410dp"
         android:layout_height="729dp"
         android:background="#F3A68E"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,18 +18,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="100dp"
+            android:layout_marginBottom="200dp"
+            android:onClick="clickFunction"
+            android:text="@string/guess"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            tools:ignore="UsingOnClickInXml" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="63dp"
-            android:layout_marginLeft="63dp"
-            android:layout_marginTop="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginVertical="75dp"
             android:background="#FF9100"
-            android:text="GUESS THE NUMBER"
+            android:text="@string/guess_the_number"
+            android:textAlignment="center"
             android:textSize="30sp" />
 
         <TextView
@@ -37,46 +52,49 @@
             android:layout_width="391dp"
             android:layout_height="68dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="168dp"
-            android:text="I am thinking a number between 1 to 100. Can you guess what it is ?"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="235dp"
+            android:text="@string/i_am_thinking_a_number_between_1_to_100_can_you_guess_what_it_is"
+            android:textAlignment="center"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/editId"
-            android:layout_width="348dp"
-            android:layout_height="67dp"
+            android:layout_width="283dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="343dp"
-            android:layout_marginEnd="29dp"
-            android:layout_marginRight="29dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="351dp"
+            android:layout_marginEnd="63dp"
+            android:autofillHints=""
             android:ems="10"
             android:gravity="center"
-            android:hint="ENTER"
+            android:hint="@string/enter"
             android:inputType="numberDecimal" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="145dp"
-            android:layout_marginRight="145dp"
-            android:layout_marginBottom="162dp"
-            android:onClick="clickFunction"
-            android:text="GUESS"
+            android:layout_marginHorizontal="100dp"
+            android:layout_marginVertical="140dp"
+            android:clickable="true"
+            android:text="@string/play_again"
+            android:textAlignment="center"
             android:textSize="30sp"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="UsingOnClickInXml"
+            android:focusable="true" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
